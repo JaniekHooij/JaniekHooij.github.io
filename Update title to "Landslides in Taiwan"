@@ -10,7 +10,7 @@
   </style>
 </head>
 <body>
-  <h1>Landslide Heatmap </h1>
+  <h1>Landslides in Taiwan </h1>
   <!-- Replace "yourmap.html" with the filename of your actual map -->
   <iframe src="static_maps.html"></iframe>
 </body>
