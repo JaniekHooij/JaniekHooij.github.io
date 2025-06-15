@@ -5,31 +5,47 @@
   <title>Landslides in Taiwan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
     }
-
     h1 {
-      background-color: #004d99;
-      color: white;
-      padding: 20px 0;
+      background: #004d99;
+      color: #fff;
       margin: 0;
+      padding: 1rem;
+      text-align: center;
     }
-
+    #map-container {
+      width: 100%;
+      height: calc(100% - 60px); /* adjust if your header is taller/shorter */
+    }
     iframe {
       width: 100%;
-      height: 90vh;
+      height: 100%;
       border: none;
+    }
+    .fallback {
+      text-align: center;
+      padding: 1rem;
+      background: #fdd;
+      color: #900;
     }
   </style>
 </head>
 <body>
   <h1>Landslides in Taiwan </h1>
-  <!-- Make sure this file exists in the same folder -->
-  <iframe src="static_maps.html" title="Landslide Heatmap of Taiwan"></iframe>
+  <div id="map-container">
+    <iframe
+      src="./static_maps.html"
+      title="Landslide Heatmap of Taiwan"
+    ></iframe>
+  </div>
+  <noscript class="fallback">
+    It looks like your browser isn’t allowing scripts or iframes —  
+    <a href="./static_maps.html" target="_blank">click here to open the map directly</a>.
+  </noscript>
 </body>
 </html>
